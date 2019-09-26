@@ -10,18 +10,19 @@ int pause= 1000;
 int mpause = 2000;
 int backtime = 2000;
 int turntime= 2000;
-
+int r_bumber = 9;
+int l_bumper = 0;
 int main()
 {
    while(1){ //while true (1)
      // stuff i want to loop
     forward(); //call function forward
      //look for collision
-     if(digital(9)){ //if collision is found (true 1) right motor from head
+     if(digital(r_bumber)){ //if collision is found (true 1) right motor from head
     	   backward();// back up if collision for backsleep 
     	   left(); // turn left for turntime
      }
-     if(digital(0)){//if hits left bumber
+     if(digital(l_bumper)){//if hits left bumber
        backward();
        right();
    }
